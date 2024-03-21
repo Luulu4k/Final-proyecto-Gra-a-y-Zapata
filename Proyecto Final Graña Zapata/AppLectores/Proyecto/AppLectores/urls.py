@@ -28,7 +28,7 @@ urlpatterns = [
     path("borrar_libro/<libro>", borrar_libro, name= "Eliminar Libro"),
 
 
-    path("buscar_libro", buscar_libro),
+    path("buscar_libro", buscar_libro, name= "buscar"),
     path("resultados_libro", resultados_libro),
 
     
