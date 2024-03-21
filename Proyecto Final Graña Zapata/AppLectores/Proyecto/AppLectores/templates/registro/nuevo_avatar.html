@@ -1,0 +1,14 @@
+{% extends "padre.html" %}
+
+{% block parrafo %}
+
+<form action="" method="post" enctype="multipart/form-data"> {% csrf_token %}
+
+{{formu}}
+
+<button type="submit">Subir Avatar</button>
+
+
+</form>
+
+{% endblock %}

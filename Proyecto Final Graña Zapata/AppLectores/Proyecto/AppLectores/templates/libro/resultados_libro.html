@@ -1,0 +1,16 @@
+{% extends "padre.html" %}
+
+
+{% block parrafo %}
+<ol> 
+{% for libro in resultados %}
+
+    <li>{{libro.titulo}}</li>
+
+
+
+{% endfor %}
+</ol>
+{% endblock %}
+
+

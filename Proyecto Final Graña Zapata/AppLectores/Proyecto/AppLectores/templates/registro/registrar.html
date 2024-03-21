@@ -1,0 +1,19 @@
+{% extends "padre.html" %}
+
+{% block titulo %}
+<h1 class="mb-5">Registrar usuario nuevo</h1>
+
+{% endblock %}
+
+{% block parrafo %}
+
+<form action="" method="post"> {% csrf_token %}
+
+{{formu}}
+
+<button type="submit">Registrar usuario</button>
+
+
+</form>
+
+{% endblock %}

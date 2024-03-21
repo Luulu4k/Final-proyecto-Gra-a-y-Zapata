@@ -1,0 +1,31 @@
+{% extends "padre.html" %}
+
+{% block titulo %}
+<h1 class="mb-5">Espacio Lectores</h1>
+{% endblock %}
+
+
+{% block parrafo %}
+<table>
+   <thead>
+      <tr>
+         <th>Nombre</th>
+         <th>Género</th>
+      </tr>
+   </thead>
+   <tbody>
+      {% for valor in total %}
+      <tr>
+         <td>{{ valor.nombre }}</td>
+         <td>{{ valor.genero}}
+         {% if user.is_authenticated %}
+         <a href="{% url 'Editar Lector' valor.id %}">Actualizar Escritor</a>
+         <a href="{% url 'Eliminar Lector' valor.id %}">Eliminar Datos</a>
+         {% endif %}
+         </td>
+      </tr>
+      {% endfor %}
+   </tbody>
+</table>
+<a class="btn btn-primary" href="{% url 'Crear Lector' %}"> Nuevo Lector</a>
+{% endblock %}
