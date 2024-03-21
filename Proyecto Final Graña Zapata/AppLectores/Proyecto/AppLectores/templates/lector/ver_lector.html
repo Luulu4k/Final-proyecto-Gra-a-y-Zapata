@@ -19,7 +19,7 @@
          <td>{{ valor.nombre }}</td>
          <td>{{ valor.genero}}
          {% if user.is_authenticated %}
-         <a href="{% url 'Editar Lector' valor.id %}">Actualizar Escritor</a>
+         <a href="{% url 'Editar Lector' valor.id %}">Actualizar Lector</a>
          <a href="{% url 'Eliminar Lector' valor.id %}">Eliminar Datos</a>
          {% endif %}
          </td>

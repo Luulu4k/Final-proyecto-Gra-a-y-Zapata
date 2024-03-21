@@ -22,7 +22,7 @@
          <td>{{ valor.autor}}
 
          {% if user.is_authenticated %}
-         <a href="{% url 'Editar Libro' valor.id %}">Actualizar Escritor</a>
+         <a href="{% url 'Editar Libro' valor.id %}">Actualizar Libro</a>
          <a href="{% url 'Eliminar Libro' valor.id %}">Eliminar Datos</a>
          {% endif %}
          </td>
