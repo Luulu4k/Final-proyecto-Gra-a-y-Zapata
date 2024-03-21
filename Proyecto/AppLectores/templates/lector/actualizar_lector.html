@@ -1,0 +1,13 @@
+{% extends "padre.html" %}
+
+{% block parrafo %}
+
+<form action="" method="post"> {% csrf_token %}
+
+{{formu}}
+
+  <input type="submit" value="Guardar">
+
+</form>
+
+{% endblock %}

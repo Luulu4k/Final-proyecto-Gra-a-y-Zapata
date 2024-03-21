@@ -1,0 +1,31 @@
+{% extends "padre.html" %}
+
+
+{% block titulo %}
+<h1 class="mb-5">Hola escritores</h1>
+{% endblock %}
+
+{% block parrafo %}
+<table>
+   <thead>
+      <tr>
+         <th>Autor</th>
+         <th>Género</th>
+      </tr>
+   </thead>
+   <tbody>
+      {% for valor in total %}
+      <tr>
+         <td>{{ valor.nombre }}</td>
+         <td>{{ valor.genero_preferido }}
+         {% if user.is_authenticated %}
+         <a href="{% url 'Editar Escritor' valor.id %}">Actualizar Escritor</a>
+         <a href="{% url 'Eliminar Escritor' valor.id %}">Eliminar Datos</a>
+         {% endif %}
+         </td>
+      </tr>
+      {% endfor %}
+   </tbody>
+</table>
+<a class="btn btn-primary" href="{% url 'Crear Escritor' %}"> Nuevo Escritor</a>
+{% endblock %}
